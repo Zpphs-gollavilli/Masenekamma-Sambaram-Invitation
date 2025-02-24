@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>అహ్వాన పత్రిక - Invitation</title>
+  <style>
+    /* Basic Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      background: #FFF9C4; /* Light Yellow */
+      font-family: sans-serif;
+    }
+    /* Header Styling */
+    header {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #540303; /* Dark Gray */
+    }
+    /* Center container for responsiveness */
+    .bg-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 80px); /* Adjust height for header */
+      position: relative;
+      overflow: hidden;
+      padding: 10px;
+      transition: background 0.5s ease;
+    }
+    /* Circular Trigger Image */
+    .trigger-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: opacity 0.5s ease;
+      z-index: 2;
+    }
+    /* Invitation Paper (responsive) */
+    .paper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90vw;
+      max-width: 700px;
+      max-height: 600px;
+      background: #fff;
+      border: 2px solid #424242;  /* Charcoal Gray */
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      padding: 20px;
+      overflow-y: auto;
+      opacity: 0;
+      transform: translate(-50%, 50px) scale(0.8);
+      transition: transform 0.5s ease 0.5s, opacity 0.5s ease 0.5s;
+      cursor: pointer;
+      z-index: 1;
+    }
+    /* Paper Content Styling */
+    .paper .paper-content p {
+      margin: 10px 0;
+      text-align: justify;
+      font-size: 1rem;
+      color: #212121;  /* Dark Gray */
+      line-height: 1.5;
+    }
+    .paper .paper-content h3 {
+      margin: 20px 0 10px;
+      font-size: 1.5rem;
+      color: #424242;
+    }
+    /* Open State – when .open class is added */
+    .bg-wrapper.open .trigger-img {
+      opacity: 0;
+    }
+    .bg-wrapper.open .paper {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with Title -->
+  <header>
+    <h1>అహ్వాన పత్రిక</h1>
+  </header>
+  
+  <div class="bg-wrapper">
+    <!-- Circular Image Trigger -->
+    <img src="envelop-centre.jpeg" alt="Invitation Icon" class="trigger-img" />
+    
+    <!-- Invitation Paper with Detailed Message -->
+    <div class="paper">
+      <div class="paper-content">
+        <p>ప్రియమైన కుటుంబ సభ్యులారా,</p>
+        <p>
+          మన కుటుంబ బంధాలను మరింత బలపరచుకోవడం, సంప్రదాయాలను పునఃప్రేరేపించడం మరియు
+          కొత్త జ్ఞాపకాలను సృష్టించుకోవడం కోసం, ఈ సంవత్సరం <strong>మాసెనెంకమ్మ సంబరాన్ని</strong> జరుపుకోవడానికి మీ
+          అందరినీ హృదయపూర్వకంగా ఆహ్వానిస్తున్నాము. ఈ వేడుక ఒక సాధారణ సమావేశం కాదూ; ఇది మన
+          కుటుంబ చరిత్ర, ఆత్మీయ అనుబంధాలు మరియు సాంప్రదాయాల గొప్పతనాన్ని మనసారిగా పునఃజీవితం
+          చేసుకునే ఒక ప్రత్యేక సందర్భం.
+        </p>
+        <p>---</p>
+        <h3>కార్యక్రమ వివరాలు</h3>
+        <p><strong>తేదీ:</strong> 26, 27 ఫిబ్రవరి</p>
+        <p>
+          ఈ రెండు రోజుల కార్యక్రమంలో మన సంబరాన్ని మరింత ప్రత్యేకంగా,  వివిధ
+          కార్యక్రమాలు, ఆచారాలు మరియు వినోద కార్యక్రమాలు ఉంటాయి.
+        </p>
+        <p>---</p>
+        <h3>ముఖ్య కార్యక్రమాలు</h3>
+        <p><strong>సాంప్రదాయ పూజా & ఆచారాలు:</strong><br>
+          కుటుంబంలో పెద్దల ఆశీర్వాదం, కీర్తనలు మరియు పూజా కార్యక్రమాల ద్వారా మన వంశపారంపర్యాన్ని
+          గౌరవిస్తాము. ప్రతి ఒక్కరూ ఈ పూజలో పాల్గొని, మన సంప్రదాయాలను మరింత మెరుగుపరచుకోవడానికి
+          మరియు అనుబంధాన్ని పునరుద్ధరించుకోవడానికి ఒక మంచి అవకాశాన్ని పొందుతారు.
+        </p>
+        <p><strong>విందు & ప్రత్యేక భోజనం:</strong><br>
+          రుచికరమైన వంటకాలు, ప్రత్యేక స్వీట్లు మరియు ప్రసిద్ధ సాంప్రదాయ భోజనాలు విందు సమయంలో అందరూ
+          ఆస్వాదించగలరు. ఈ విందు ద్వారా కుటుంబ సభ్యుల మధ్య స్నేహం, ప్రేమ మరియు సహకారం మరింత పెరుగుతుంది.
+        </p>
+        <!-- <p><strong>కుటుంబ ఆటలు, గేమ్స్ & క్రియేటివ్ వర్క్‌షాప్‌లు:</strong><br>
+          పిల్లలు, యువత మరియు వృద్ధులందరూ కలిసి పాల్గొనే రకాల కుటుంబ ఆటలు, గేమ్స్ మరియు వినోద
+          కార్యక్రమాలు ఏర్పాటు చేయబడ్డాయి. ఈ కార్యక్రమాలు మన కుటుంబ సభ్యుల మధ్య సరదా, ఆనందం మరియు ఒకరికొకరిపై
+          మరింత విశ్వాసాన్ని పెంపొందించేందుకు దోహదం చేస్తాయి.
+        </p>
+        <p>---</p> -->
+        <h3>ప్రత్యేక సూచనలు</h3>
+        <!-- <p><strong>దుస్తులు & అలంకరణ:</strong><br>
+          సాంప్రదాయ వస్త్రాలు లేదా మీ ఇష్టమైన సంప్రదాయ దుస్తులు ధరించమని మనవి. వీటివల్ల మీ అందరూ ఈ వేడుకలో
+          మరింత సాంప్రదాయాత్మకంగా, ఆత్మీయంగా కనిపిస్తారు.
+        </p> -->
+        <p><strong>సానుకూల ఆత్మవిశ్వాసం:</strong><br>
+          ఈ సంబరం ఒక కుటుంబ స్నేహమయ సంఘటన. అందరూ తమ కుటుంబంలో ఉన్న ఆనందం, ప్రేమ మరియు స్మృతులను
+          పంచుకోవడంలో సానుకూలంగా పాల్గొనాలని కోరుకుంటున్నాము.
+        </p>
+        <!-- <p><strong>హాజరు నిర్ధారణ:</strong><br>
+          ఈ సంబరం మరింత సాఫీగా నిర్వహణ కోసం, దయచేసి మీ హాజరును నిర్ధారించడానికి [కాంటాక్ట్ వివరాలు]
+          ద్వారా సంప్రదించండి.
+        </p>
+        <p>---</p> -->
+        <p>
+          మనందరం ఒకే కుటుంబ సభ్యులమని, ప్రతి ఒక్కరి సాన్నిధ్యం, ఆశీర్వాదం మరియు ప్రేమ ఈ సంబరాన్ని
+          మరింత ఆనందదాయకంగా, స్మృతిమయంగా మార్చుతుందని ఆశిస్తున్నాము. మీ అందరి ఉత్సాహం, చైతన్యం
+          మరియు పాల్గొనటం ఈ వేడుకకు మరింత వెలుగు తీసుకురాగలవు.
+        </p>
+        
+
+        <p>ఎదురుచూస్తూ,</p>
+        <p><strong>గుత్తుల సిద్ధార్థ్ </strong></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- jQuery for Interactivity -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // When the circular image is clicked, open the invitation.
+      $(".trigger-img").click(function(){
+        $(".bg-wrapper").addClass("open");
+      });
+      // Clicking on the invitation paper closes it.
+      $(".paper").click(function(){
+        $(".bg-wrapper").removeClass("open");
+      });
+    });
+  </script>
+</body>
+</html>
